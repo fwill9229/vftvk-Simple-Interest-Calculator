@@ -18,7 +18,9 @@
             <th>Interest Rate</th>
             <th>
               <div class="slidecontainer">
-                <input type="range" min=".5" max="100" value="3.5" class="slider" id="myRange" onchange="showIntRate()">
+                <input type="range" min=".5" max="100" value="3.5"step=".5" class="slider" id="myRange" onchange="showIntRate()">
+                <input type="button" value="-" onclick="minus(), showIntRate()"></button>
+                <input type="button" value="+" onclick="plus(), showIntRate()"></button>
                 <span id="slider">3.5</span>%
               </div>
             </th>

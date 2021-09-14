@@ -41,3 +41,9 @@ function showIntRate(){
   var output = document.getElementById("slider");
   output.innerHTML = slider.value;
 }
+function plus(){
+  document.getElementById("myRange").value++;
+}
+function minus(){
+  document.getElementById("myRange").value--;
+}
