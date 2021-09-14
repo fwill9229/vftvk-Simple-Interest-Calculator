@@ -1,10 +1,10 @@
-function compute()
-{
+function compute(){
     var result = document.getElementById("result");
 
     var principal = document.getElementById("principal");
     var p1 = document.getElementById("p1");
     var p1Val = document.getElementById("p1Val");
+
 
     var myRange = document.getElementById("myRange");
     var p2 = document.getElementById("p2");
@@ -19,6 +19,12 @@ function compute()
     var p4 = document.getElementById("p4");
     var p4Val = document.getElementById("p4Val");
 
+    /*Validando principal*/
+    if(parseFloat(principal.value) < 1 || principal.value==""){
+      alert("Amount value must be bigger than 0");
+      document.getElementById("principal").focus();
+      return -1
+    }
     result.hidden = false;
     /*Calculando ya con interes*/
     total = (myRange.value / 100)*principal.value*years.value;
@@ -35,7 +41,6 @@ function compute()
     p4.innerHTML = "in the year ";
     p4Val.innerHTML = finalYear;
 }
-
 function showIntRate(){
   var slider = document.getElementById("myRange");
   var output = document.getElementById("slider");
